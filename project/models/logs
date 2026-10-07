@@ -1,0 +1,28 @@
+Loading artifacts...
+  Train: (454902, 30) | Test: (56962, 30)
+
+Hyperparameter search:
+  Training (100,) alpha=0.0001 ...
+    ->  FPR=0.0007  F1=0.75  AUC=0.969
+  Training (100, 50) alpha=0.0001 ...
+    ->  FPR=0.0005  F1=0.7962  AUC=0.9711
+  Training (100, 50) alpha=0.001 ...
+    ->  FPR=0.0005  F1=0.7905  AUC=0.9687
+  Training (200, 100) alpha=0.0001 ...
+    ->  FPR=0.0005  F1=0.7864  AUC=0.9633
+
+Best params: {'hidden_layer_sizes': (100, 50), 'alpha': 0.0001}
+
+Final results:
+  FPR (primary): 0.0005
+  Precision:     0.7434
+  Recall:        0.8571
+  F1:            0.7962
+  AUC-ROC:       0.9711
+
+Saved: F:\assignments_2026\projects_2026_june\fraud_detection\project\models\..\artifacts\mlp_model.pkl
+Saved: F:\assignments_2026\projects_2026_june\fraud_detection\project\models\results\mlp_confusion_matrix.png
+
+Drawing precision-recall curve comparison...
+Saved: F:\assignments_2026\projects_2026_june\fraud_detection\project\models\results\precision_recall_curve.png
+Saved: F:\assignments_2026\projects_2026_june\fraud_detection\project\models\results\results_table.csv

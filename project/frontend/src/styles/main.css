@@ -1,0 +1,110 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* SHAP explanation list */
+.shap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shap-list li {
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-left: 3px solid #2563eb;
+  border-radius: 0 4px 4px 0;
+}
+
+.shap-disclaimer {
+  font-size: 12px;
+  color: #64748b;
+  font-style: italic;
+  border-left-color: #cbd5e1 !important;
+  background: transparent !important;
+}
+
+/* Rules list */
+.rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rules-list li {
+  font-size: 13px;
+  padding: 10px 14px;
+  background: #fff7ed;
+  border-left: 3px solid #d97706;
+  border-radius: 0 4px 4px 0;
+}
+
+/* SHAP row — remove border on last item */
+.shap-row:last-child {
+  border-bottom: none !important;
+}
+
+/* Risk score inline bar */
+.risk-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.risk-bar {
+  flex: 1;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #2563eb;
+}
+
+/* User profile hint box */
+.user-profile-box {
+  font-size: 12px;
+  color: #64748b;
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 8px 12px;
+  line-height: 1.5;
+}
+
+/* Result banner */
+.result-banner-approved {
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.result-banner-held {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}

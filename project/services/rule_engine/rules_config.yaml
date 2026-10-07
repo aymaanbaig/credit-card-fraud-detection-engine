@@ -1,0 +1,13 @@
+amount_rule:
+  max_amount: 500.0
+  enabled: true
+
+night_transaction_rule:
+  night_start_second: 0
+  night_end_second: 18000
+  day_seconds: 86400
+  enabled: true
+
+high_risk_feature_rule:
+  v14_threshold: -5.0
+  enabled: true

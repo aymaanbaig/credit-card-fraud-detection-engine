@@ -1,0 +1,20 @@
+# Dataset — never commit
+data/creditcard.csv
+
+# Generated artifacts — recreate by running preprocessing/preprocess.py
+artifacts/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+CLAUDE.md
+FraudDetectionV1/

@@ -1,0 +1,237 @@
+[
+  {
+    "transaction_id": "alice_1786269589",
+    "decision": "genuine",
+    "risk_score": 0.0,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "Alice Johnson's account is 8 years old with a consistent history, which is associated with lower fraud risk. (account tenure) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson has made 2 transactions recently, which is within their normal pattern of 2-3 per week. (transaction velocity) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson usually shops at Groceries and this transaction is in the same category \u2014 consistent with their normal spending pattern. (merchant risk) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson normally shops at Groceries and this transaction's digital fingerprint matches their usual in-person pattern. (session behaviour) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson typically spends GBP35.00 at Groceries. This transaction fits within their established purchase pattern. (purchase pattern) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "alice",
+    "user_name": "Alice Johnson",
+    "card_last4": "4242",
+    "raw_amount": 28.5,
+    "merchant_name": "Tesco Express",
+    "merchant_category": "Groceries",
+    "submitted_at": "2026-08-09T09:59:50.113804",
+    "id": 1
+  },
+  {
+    "transaction_id": "alice_1786269590",
+    "decision": "genuine",
+    "risk_score": 0.0,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "Alice Johnson's account is 8 years old with a consistent history, which is associated with lower fraud risk. (account tenure) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson has made 2 transactions recently, which is within their normal pattern of 2-3 per week. (transaction velocity) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson usually shops at Groceries and this transaction is in the same category \u2014 consistent with their normal spending pattern. (merchant risk) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson normally shops at Groceries and this transaction's digital fingerprint matches their usual in-person pattern. (session behaviour) (SHAP contribution: strongly away from fraud)",
+      "Alice Johnson typically spends GBP35.00 at Groceries. This transaction fits within their established purchase pattern. (purchase pattern) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "alice",
+    "user_name": "Alice Johnson",
+    "card_last4": "4242",
+    "raw_amount": 19.99,
+    "merchant_name": "Sainsbury's",
+    "merchant_category": "Groceries",
+    "submitted_at": "2026-08-09T09:59:50.276536",
+    "id": 2
+  },
+  {
+    "transaction_id": "bob_1786269590",
+    "decision": "fraud",
+    "risk_score": 1.0,
+    "model_used": "xgboost",
+    "triggered_rules": [
+      "amount",
+      "personal_amount"
+    ],
+    "rule_reasons": [
+      "Transaction amount \u00a3650.00 is unusually high \u2014 exceeds the configured threshold of \u00a3500.00.",
+      "Transaction amount GBP650.00 is 5.4x this cardholder's typical spend of GBP120.00 \u2014 exceeds the personal threshold of 5x (GBP600.00)."
+    ],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Bob Smith's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Bob Smith typically spends around GBP120.00, but GBP650.00 combined with 8 recent transactions deviates from their normal pattern \u2014 a signal associated with card testing fraud. (spend-to-frequency ratio) (SHAP contribution: strongly toward fraud)",
+      "Recent activity on Bob Smith's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Bob Smith usually shops at Electronics. This merchant type carries a higher fraud risk than their normal category. (merchant risk) (SHAP contribution: strongly toward fraud)",
+      "The authentication check on Bob Smith's card ending 5555 was weak or failed \u2014 this happens when someone uses stolen card details online without having the physical card. (authentication) (SHAP contribution: strongly toward fraud)"
+    ],
+    "user_id": "bob",
+    "user_name": "Bob Smith",
+    "card_last4": "5555",
+    "raw_amount": 650.0,
+    "merchant_name": "Currys PC World",
+    "merchant_category": "Electronics",
+    "submitted_at": "2026-08-09T09:59:50.479788",
+    "id": 3
+  },
+  {
+    "transaction_id": "carol_1786269590",
+    "decision": "uncertain",
+    "risk_score": 1.0,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Carol Davies's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Carol Davies typically spends around GBP60.00, but GBP215.00 combined with 11 recent transactions deviates from their normal pattern \u2014 a signal associated with card testing fraud. (spend-to-frequency ratio) (SHAP contribution: strongly toward fraud)",
+      "This transaction's location pattern differs from Carol Davies's usual activity around Birmingham, UK. (geographic pattern) (SHAP contribution: strongly toward fraud)",
+      "Recent activity on Carol Davies's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Carol Davies usually shops at Clothing. This merchant type carries a higher fraud risk than their normal category. (merchant risk) (SHAP contribution: strongly toward fraud)"
+    ],
+    "user_id": "carol",
+    "user_name": "Carol Davies",
+    "card_last4": "9999",
+    "raw_amount": 215.0,
+    "merchant_name": "ASOS",
+    "merchant_category": "Clothing",
+    "submitted_at": "2026-08-09T09:59:50.975173",
+    "id": 4
+  },
+  {
+    "transaction_id": "dave_1786269591",
+    "decision": "genuine",
+    "risk_score": 0.4014,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Dave Patel's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Recent activity on Dave Patel's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Dave Patel's card ending 1234 passed its verification check normally, consistent with their usual in-person purchases at Travel. (card verification) (SHAP contribution: strongly away from fraud)",
+      "This transaction used the same payment channel Dave Patel normally uses at Travel. (transaction channel) (SHAP contribution: strongly away from fraud)",
+      "Dave Patel usually shops at Travel and this transaction is in the same category \u2014 consistent with their normal spending pattern. (merchant risk) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "dave",
+    "user_name": "Dave Patel",
+    "card_last4": "1234",
+    "raw_amount": 88.0,
+    "merchant_name": "easyJet",
+    "merchant_category": "Travel",
+    "submitted_at": "2026-08-09T09:59:51.432888",
+    "id": 5
+  },
+  {
+    "transaction_id": "dave_1786269591",
+    "decision": "uncertain",
+    "risk_score": 0.4659,
+    "model_used": "xgboost",
+    "triggered_rules": [
+      "personal_amount"
+    ],
+    "rule_reasons": [
+      "Transaction amount GBP380.00 is 5.1x this cardholder's typical spend of GBP75.00 \u2014 exceeds the personal threshold of 5x (GBP375.00)."
+    ],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Dave Patel's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Recent activity on Dave Patel's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Dave Patel's card ending 1234 passed its verification check normally, consistent with their usual in-person purchases at Travel. (card verification) (SHAP contribution: strongly away from fraud)",
+      "This transaction used the same payment channel Dave Patel normally uses at Travel. (transaction channel) (SHAP contribution: strongly away from fraud)",
+      "The merchant risk signal did not raise the fraud score, despite Dave Patel usually shopping at Travel rather than Electronics. The model's other signals outweighed the category difference. (merchant risk) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "dave",
+    "user_name": "Dave Patel",
+    "card_last4": "1234",
+    "raw_amount": 380.0,
+    "merchant_name": "Premier Inn",
+    "merchant_category": "Electronics",
+    "submitted_at": "2026-08-09T09:59:52.436887",
+    "id": 6
+  },
+  {
+    "transaction_id": "eve_1786269592",
+    "decision": "genuine",
+    "risk_score": 0.2554,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Eve Okonkwo's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Eve Okonkwo's card ending 7777 passed its verification check normally, consistent with their usual in-person purchases at Electronics. (card verification) (SHAP contribution: strongly away from fraud)",
+      "Recent activity on Eve Okonkwo's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Eve Okonkwo's card ending 7777 passed its authentication check normally. (authentication) (SHAP contribution: strongly away from fraud)",
+      "This transaction used the same payment channel Eve Okonkwo normally uses at Electronics. (transaction channel) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "eve",
+    "user_name": "Eve Okonkwo",
+    "card_last4": "7777",
+    "raw_amount": 67.0,
+    "merchant_name": "Argos",
+    "merchant_category": "Groceries",
+    "submitted_at": "2026-08-09T09:59:52.960701",
+    "id": 7
+  },
+  {
+    "transaction_id": "eve_1786269593",
+    "decision": "genuine",
+    "risk_score": 0.2554,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Eve Okonkwo's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Eve Okonkwo's card ending 7777 passed its verification check normally, consistent with their usual in-person purchases at Electronics. (card verification) (SHAP contribution: strongly away from fraud)",
+      "Recent activity on Eve Okonkwo's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Eve Okonkwo's card ending 7777 passed its authentication check normally. (authentication) (SHAP contribution: strongly away from fraud)",
+      "This transaction used the same payment channel Eve Okonkwo normally uses at Electronics. (transaction channel) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "eve",
+    "user_name": "Eve Okonkwo",
+    "card_last4": "7777",
+    "raw_amount": 43.0,
+    "merchant_name": "Amazon",
+    "merchant_category": "Electronics",
+    "submitted_at": "2026-08-09T09:59:53.480610",
+    "id": 8
+  },
+  {
+    "transaction_id": "dave_1786270424",
+    "decision": "genuine",
+    "risk_score": 0.4014,
+    "model_used": "xgboost",
+    "triggered_rules": [],
+    "rule_reasons": [],
+    "shap_explanation": [
+      "Note: V-feature explanations are working assumptions based on fraud detection literature (Bahnsen et al. 2016, IEEE-CIS dataset). Original feature names were not disclosed by the data provider.",
+      "",
+      "A rapid sequence of transactions was detected on Dave Patel's card in a short time window \u2014 a common pattern when a stolen card is used before it is blocked. (transaction velocity) (SHAP contribution: strongly toward fraud)",
+      "Recent activity on Dave Patel's account deviates from their established pattern \u2014 this kind of behavioural shift is associated with account takeover. (account tenure) (SHAP contribution: strongly toward fraud)",
+      "Dave Patel's card ending 1234 passed its verification check normally, consistent with their usual in-person purchases at Travel. (card verification) (SHAP contribution: strongly away from fraud)",
+      "This transaction used the same payment channel Dave Patel normally uses at Travel. (transaction channel) (SHAP contribution: strongly away from fraud)",
+      "Dave Patel usually shops at Travel and this transaction is in the same category \u2014 consistent with their normal spending pattern. (merchant risk) (SHAP contribution: strongly away from fraud)"
+    ],
+    "user_id": "dave",
+    "user_name": "Dave Patel",
+    "card_last4": "1234",
+    "raw_amount": 70.0,
+    "merchant_name": "Booking.com",
+    "merchant_category": "Travel",
+    "submitted_at": "2026-08-09T10:13:45.236639",
+    "id": 9
+  }
+]

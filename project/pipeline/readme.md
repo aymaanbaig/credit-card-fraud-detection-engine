@@ -1,0 +1,1 @@
+uv run uvicorn pipeline.main:app --reload --port 8000
