@@ -103,9 +103,23 @@ Evaluation plots and model outputs are stored in the model results directory whe
 
 ## Project Status
 
-This repository contains the codebase and supporting documentation for my MSc individual dissertation project.
+This project was completed as part of my MSc Advanced Computer Science dissertation at the University of Leicester.
 
-The objectives listed above describe the intended project scope. Some features may represent planned extensions rather than completed functionality. Refer to the source code and evaluation results for the current implementation status.
+The completed system brings together rule-based fraud detection, machine learning models and explainable AI in a hybrid fraud detection workflow.
+
+The implementation includes:
+
+- Data preprocessing and preparation using the Kaggle Credit Card Fraud Detection dataset.
+- XGBoost and Multi-Layer Perceptron (MLP) model training and evaluation.
+- SMOTE-based handling of class imbalance.
+- Model evaluation using precision, recall, F1-score, false positive rate, ROC-AUC and precision-recall analysis.
+- SHAP-based explanations to interpret model predictions.
+- Plain-English explanations of flagged transactions.
+- A configurable rule engine and hybrid decision pipeline.
+- A React-based analyst dashboard for reviewing fraud alerts and transaction information.
+- Supporting backend services and database integration.
+
+The project explores how combining rule-based checks, machine learning and explainability can support fraud detection while helping analysts understand why transactions are flagged.
 
 ## Author
 
