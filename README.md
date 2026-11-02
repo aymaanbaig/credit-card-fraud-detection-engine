@@ -40,7 +40,6 @@ The project also incorporates SHAP-based explainability and plain-English explan
 | Imbalanced Learning | imbalanced-learn, SMOTE |
 | Backend | FastAPI |
 | Frontend | React, Vite |
-| Database | PostgreSQL, SQLAlchemy |
 | Testing | Pytest |
 | Package Management | uv |
 
