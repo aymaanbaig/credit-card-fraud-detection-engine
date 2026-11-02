@@ -1,45 +1,46 @@
-## Project title: A Hybrid Credit Card Fraud Detection System Using Rule-Based and Machine Learning Approaches with Explainable AI
+# A Hybrid Credit Card Fraud Detection System Using Rule-Based and Machine Learning Approaches with Explainable AI
 
+## Project Overview
 
+Credit card fraud detection is a challenging problem for financial institutions. Systems must identify suspicious transactions while minimising false positives that can disrupt legitimate customer activity and create additional work for fraud analysts.
 
-### Project description:
-Credit card fraud is a big problem. Every year banks and customers lose billions of pounds to it, and catching it as it happens is still one of the hardest jobs in financial technology. Most systems today fall into one of two camps. Some use fixed rules that run very fast but cannot learn or adapt. Others use machine learning that can spot complex patterns but cannot explain why they made a decision. Both have a weakness, and neither one solves the problem on its own. I want to build a system called a Hybrid Fraud Detection System that uses both approaches together. A rule engine handles the simple, fast checks, and a deep learning model handles the harder patterns that rules miss. The deep learning part trains and compares two models, an XGBoost baseline and a Multi-Layer Perceptron, on the Kaggle Credit Card Fraud dataset. On top of this I will add a SHAP explainability layer that turns each decision into a plain-English reason, and a React dashboard where analysts can see the flagged transactions and give their verdict. The main focus is comparing the two models on false positive rate rather than accuracy, since every false alarm blocks a real customer and adds work for an analyst.
+This MSc Advanced Computer Science dissertation project explores a hybrid fraud detection approach that combines rule-based checks with machine learning and explainable AI techniques.
 
-### List of requirements (objectives):
+The system is designed to use a rule engine to identify transactions that meet predefined fraud conditions, while machine learning models identify potentially fraudulent patterns that may not be captured by fixed rules.
 
-Essential:
-- Rule Engine: The system must check each transaction against configurable rules for velocity, location anomaly and amount threshold, and return a decision.
-- Model Training: The system must train an XGBoost model and a Multi-Layer Perceptron on the Kaggle Credit Card Fraud dataset.
-- Imbalance Handling: The system must apply SMOTE oversampling to the training set only.
-- Model Evaluation: The system must report false positive rate, precision, recall, F1 score and AUC-ROC for both models.
-- Precision-Recall Curves: The system must produce precision-recall curves for both models at different thresholds.
-- SHAP Explanations: The system must produce SHAP feature importance values for each flagged transaction.
-- Plain-English Output: The system must turn the SHAP values into plain-English explanations for each flagged transaction.
-- Hybrid Pipeline: The system must combine the rule engine and the model into one pipeline that gives a single decision per transaction.
-- Analyst Dashboard: The system must provide a React dashboard showing flagged transactions, risk scores, triggered rules and SHAP explanations.
-- Analyst Feedback: The dashboard must let analysts record a verdict on each flagged transaction.
+The project uses the Kaggle Credit Card Fraud Detection dataset to train and evaluate two models:
 
-Desirable:
-- Configurable Thresholds: Analysts should be able to change the decision threshold and see how the results change.
-- Rule Management: The rules in the rule engine should be editable without changing the code.
-- Explanation History: Past explanations and verdicts should be stored so they can be reviewed later.
-- Filtering and Sorting: The dashboard should let analysts filter and sort flagged transactions by risk score or rule.
-- Model Comparison View: The dashboard should show a simple comparison of the two models results side by side.
+- **XGBoost:** A gradient-boosted decision-tree model.
+- **Multi-Layer Perceptron (MLP):** A neural network model.
 
-Optional:
-- Export Reports: The system may let analysts export a flagged transaction and its explanation as a PDF.
-- Alerts: The system may send an alert when a high-risk transaction is detected.
-- Extra Model: The system may add a third model, such as a Random Forest, to the comparison.
-- Feature Importance Summary: The system may show an overall view of which features matter most across many transactions.
+SMOTE is used to address class imbalance on the training data. Model performance is evaluated using precision, recall, F1-score, false positive rate, ROC-AUC and precision-recall analysis.
 
-### Information about this repository:
-This repository contains all code and documentation for the CO7201 Individual Project dissertation. The main software artefacts are organised as follows:
+The project also explores SHAP-based explainability to interpret model predictions and a React-based dashboard for presenting flagged transactions and related information.
 
-- /backend — Python FastAPI services for the rule engine, ML scoring and SHAP explainability
-- /models — XGBoost and MLP model training scripts and saved model files
-- /frontend — React analyst dashboard
-- /data — Dataset preprocessing scripts (raw data not included — download from Kaggle)
-- /docs — Project proposal, preliminary report and dissertation write-up
-- /tests — Unit and integration tests
+The main focus is understanding the trade-off between detecting fraudulent transactions and incorrectly flagging legitimate ones, rather than relying on accuracy alone.
 
-Commits are made after each working feature or integration milestone with concise descriptive messages.
+## Project Objectives
+
+### Essential Requirements
+
+- **Rule Engine:** Evaluate transactions against configurable rules, including transaction amount, velocity and location-related conditions.
+- **Model Training:** Train and compare XGBoost and MLP models using the Kaggle Credit Card Fraud Detection dataset.
+- **Imbalance Handling:** Apply SMOTE to the training data to address class imbalance.
+- **Model Evaluation:** Evaluate models using false positive rate, precision, recall, F1-score and ROC-AUC.
+- **Precision-Recall Analysis:** Generate precision-recall curves to examine model performance at different decision thresholds.
+- **Explainable AI:** Use SHAP to analyse the contribution of features to model predictions.
+- **Hybrid Pipeline:** Combine rule-based checks and machine learning scores into a fraud detection workflow.
+- **Analyst Dashboard:** Provide a React interface for presenting flagged transactions, risk scores and relevant detection information.
+- **Analyst Feedback:** Explore recording analyst decisions on flagged transactions.
+
+### Desirable Requirements
+
+- Allow decision thresholds to be configured and evaluated.
+- Support rule configuration without requiring changes to application code.
+- Maintain a history of explanations and analyst decisions.
+- Provide filtering and sorting of flagged transactions.
+- Include a model comparison view.
+
+### Optional Extensions
+
+- Export transaction
