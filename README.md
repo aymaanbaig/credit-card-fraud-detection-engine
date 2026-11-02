@@ -55,19 +55,25 @@ The system is organised into the following main components:
 6. **Hybrid Pipeline:** Combines rule-based and model outputs.
 7. **Database:** Stores relevant transaction and analysis information.
 
-## Model Evaluation
+## Model Evaluation Results
 
-The project uses evaluation measures suited to fraud detection, where fraudulent transactions represent a small proportion of the dataset.
+The system evaluates the MLP and XGBoost models using confusion matrices and performance curves.
 
-The evaluation includes:
+### MLP Confusion Matrix
 
-- Precision
-- Recall
-- F1-score
-- False positive rate
-- ROC-AUC
-- Precision-recall curves
-- Confusion matrices
+![MLP Confusion Matrix](project/models/results/mlp_confusion_matrix.png)
+
+### XGBoost Confusion Matrix
+
+![XGBoost Confusion Matrix](project/models/results/xgboost_confusion_matrix.png)
+
+### Precision–Recall Curve
+
+![Precision–Recall Curve](project/models/results/precision_recall_curve.png)
+
+### XGBoost ROC Curve
+
+![XGBoost ROC Curve](project/models/results/xgboost_roc_curve.png)
 
 These metrics help assess the balance between identifying fraudulent transactions and incorrectly flagging legitimate ones.
 
