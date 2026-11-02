@@ -43,4 +43,75 @@ The main focus is understanding the trade-off between detecting fraudulent trans
 
 ### Optional Extensions
 
-- Export transaction
+- Export transaction reports and explanations as PDF files.
+- Generate alerts for high-risk transactions.
+- Evaluate an additional model, such as Random Forest.
+- Provide an overall feature-importance summary.
+
+## Technology Stack
+
+- **Programming:** Python, JavaScript
+- **Machine Learning:** XGBoost, Multi-Layer Perceptron, scikit-learn
+- **Explainable AI:** SHAP
+- **Data Processing:** Pandas, NumPy, imbalanced-learn
+- **Backend:** FastAPI
+- **Frontend:** React, Vite
+- **Database:** Python database components
+- **Testing:** Pytest
+
+*The technology list should be adjusted to match the libraries actually used in the implementation.*
+
+## Repository Structure
+
+```text
+credit-card-fraud-detection-engine/
+├── project/
+│   ├── data/
+│   ├── database/
+│   ├── frontend/
+│   ├── models/
+│   │   ├── results/
+│   │   └── logs/
+│   ├── notebooks/
+│   ├── pipeline/
+│   ├── preprocessing/
+│   ├── services/
+│   │   ├── ml_scoring/
+│   │   ├── rule_engine/
+│   │   └── shap/
+│   └── tests/
+├── FAQ.md
+└── README.md
+```
+
+## Dataset
+
+The project uses the **Kaggle Credit Card Fraud Detection dataset**.
+
+The raw dataset is not included in this repository. Download it from Kaggle and follow the preprocessing instructions in the project documentation.
+
+## Model Evaluation
+
+The project investigates model performance using metrics suited to imbalanced fraud detection datasets:
+
+- Precision
+- Recall
+- F1-score
+- False positive rate
+- ROC-AUC
+- Precision-recall curves
+
+Confusion matrices and evaluation plots are available in the model results directory where generated.
+
+## Project Status
+
+This repository contains the codebase and supporting documentation for my MSc individual dissertation project.
+
+The objectives above describe the intended project scope. The implementation status of individual components should be verified against the current codebase before treating them as completed features.
+
+## Author
+
+**Aymaan Baig Mohammed**
+
+MSc Advanced Computer Science  
+University of Leicester
