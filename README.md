@@ -6,7 +6,7 @@ Credit card fraud detection is a challenging problem for financial institutions.
 
 This MSc Advanced Computer Science dissertation project explores a hybrid fraud detection approach that combines rule-based checks with machine learning and explainable AI techniques.
 
-The system is designed to use a rule engine to identify transactions that meet predefined fraud conditions, while machine learning models identify potentially fraudulent patterns that may not be captured by fixed rules.
+The system uses a rule engine to evaluate transactions against predefined fraud conditions, while machine learning models identify potentially fraudulent patterns that may not be captured by fixed rules.
 
 The project uses the Kaggle Credit Card Fraud Detection dataset to train and evaluate two models:
 
@@ -50,16 +50,13 @@ The main focus is understanding the trade-off between detecting fraudulent trans
 
 ## Technology Stack
 
-- **Programming:** Python, JavaScript
-- **Machine Learning:** XGBoost, Multi-Layer Perceptron, scikit-learn
+- **Programming Languages:** Python, JavaScript
+- **Machine Learning:** XGBoost, Multi-Layer Perceptron (MLP), scikit-learn
 - **Explainable AI:** SHAP
 - **Data Processing:** Pandas, NumPy, imbalanced-learn
 - **Backend:** FastAPI
 - **Frontend:** React, Vite
-- **Database:** Python database components
 - **Testing:** Pytest
-
-*The technology list should be adjusted to match the libraries actually used in the implementation.*
 
 ## Repository Structure
 
@@ -100,14 +97,15 @@ The project investigates model performance using metrics suited to imbalanced fr
 - False positive rate
 - ROC-AUC
 - Precision-recall curves
+- Confusion matrices
 
-Confusion matrices and evaluation plots are available in the model results directory where generated.
+Evaluation plots and model outputs are stored in the model results directory where generated.
 
 ## Project Status
 
 This repository contains the codebase and supporting documentation for my MSc individual dissertation project.
 
-The objectives above describe the intended project scope. The implementation status of individual components should be verified against the current codebase before treating them as completed features.
+The objectives listed above describe the intended project scope. Some features may represent planned extensions rather than completed functionality. Refer to the source code and evaluation results for the current implementation status.
 
 ## Author
 
@@ -115,3 +113,5 @@ The objectives above describe the intended project scope. The implementation sta
 
 MSc Advanced Computer Science  
 University of Leicester
+
+[GitHub Profile](https://github.com/aymaanbaig)
