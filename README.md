@@ -1,8 +1,6 @@
 ## Project title: A Hybrid Fraud Detection System: Combining Rule-Based and Deep Learning Approaches with Explainable AI
 
-### Student name: Aymaan Baig Mohammed
 
-### Student email: abm18@student.le.ac.uk
 
 ### Project description:
 Credit card fraud is a big problem. Every year banks and customers lose billions of pounds to it, and catching it as it happens is still one of the hardest jobs in financial technology. Most systems today fall into one of two camps. Some use fixed rules that run very fast but cannot learn or adapt. Others use machine learning that can spot complex patterns but cannot explain why they made a decision. Both have a weakness, and neither one solves the problem on its own. I want to build a system called a Hybrid Fraud Detection System that uses both approaches together. A rule engine handles the simple, fast checks, and a deep learning model handles the harder patterns that rules miss. The deep learning part trains and compares two models, an XGBoost baseline and a Multi-Layer Perceptron, on the Kaggle Credit Card Fraud dataset. On top of this I will add a SHAP explainability layer that turns each decision into a plain-English reason, and a React dashboard where analysts can see the flagged transactions and give their verdict. The main focus is comparing the two models on false positive rate rather than accuracy, since every false alarm blocks a real customer and adds work for an analyst.
