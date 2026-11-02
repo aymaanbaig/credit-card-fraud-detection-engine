@@ -1,4 +1,4 @@
-## Project title: A Hybrid Fraud Detection System: Combining Rule-Based and Deep Learning Approaches with Explainable AI
+## Project title: A Hybrid Credit Card Fraud Detection System Using Rule-Based and Machine Learning Approaches with Explainable AI
 
 
 
